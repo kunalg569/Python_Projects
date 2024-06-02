@@ -1,5 +1,5 @@
 <p align = "center">
-    <img width="714" alt="TikTok.png.webp" src="">
+    <img width="450" height = "250" alt="TikTok.png.webp" src="https://github.com/kunalg569/Python_Projects/blob/main/TikTok_ClaimsOrOpinions_RandForest_XGBoosting/TikTok.png.webp">
 </p>
 
 ## Back Ground:
