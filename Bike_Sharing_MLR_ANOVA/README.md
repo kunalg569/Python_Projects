@@ -1,5 +1,5 @@
 <div style="background-color:#f0f0f0; padding:10px; border-radius:5px;">
-    <img src="woom_rgb.jpg" width="400" height="300" style="display:block; margin:auto;" align = 'center'>
+    <img src="woom_rgb.jpg" width="400" height="200" style="display:block; margin:auto;" align = "center">
     <h1 style="color:#333333; text-align:center;">Scenario:</h1>
     <h3 style="color:#333333; text-align:center;">BikeIndia's Market Expansion Strategy</h3>
     <p style="color:#555555; font-size:16px; text-align:justify;">
