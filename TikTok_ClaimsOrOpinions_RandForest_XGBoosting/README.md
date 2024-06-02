@@ -1,4 +1,6 @@
-<img src ='TikTok.png.webp' width = '300' align = 'center' height='400'>
+<p align = "center">
+    <img width="714" alt="TikTok.png.webp" src="">
+</p>
 
 ## Back Ground:
 You are a data professional at TikTok. It has come to notice that users can report videos that they believe violate the platform's terms of service. Because there are millions of TikTok videos created and viewed every day, this means that many videos get reported—too many to be individually reviewed by a human moderator.
