@@ -29,10 +29,6 @@
 
 - <a href="https://github.com/kunalg569/Python_Projects/tree/main/Report_Automation">Report Automation</a>: Automating the generation of reports.
 
-<h3>General Resources</h3>
-
-- <a href="https://github.com/kunalg569/Python_Projects/tree/main/README.md">README.md</a>: General information and overview of the repository.
-
 ## Tech Stack
 
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
