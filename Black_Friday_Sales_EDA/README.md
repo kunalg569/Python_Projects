@@ -1,3 +1,5 @@
+*Disclaimer: This scenario is hypothetical and designed to simulate a real-world situation. The dataset and its analysis are purely for illustrative purposes and do not represent actual events or data.*
+
 <img src = 'best-black-friday-deals.jpg' width = '500' height= '350' >
 
 ## Problem statement:
