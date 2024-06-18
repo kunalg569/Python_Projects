@@ -15,7 +15,6 @@
 - <a href="https://github.com/kunalg569/Python_Projects/tree/main/InvisticoAirlines_Fine_Tuning_decision_trees">Invistico Airlines Decision Trees</a>: Fine-tuning decision tree models for Invistico Airlines data.
 - <a href="https://github.com/kunalg569/Python_Projects/tree/main/InvisticoAirlines_RandForest">Invistico Airlines Random Forest</a>: Random forest models for Invistico Airlines data.
 - <a href="https://github.com/kunalg569/Python_Projects/tree/main/Invistico_Airlines_XGBoosting">Invistico Airlines XGBoosting</a>: XGBoost models for Invistico Airlines data.
-- <a href="https://github.com/kunalg569/Python_Projects/tree/main/K_means_clustering_Penguins">K-means Clustering on Penguins</a>: K-means clustering analysis on penguin species data.
 - <a href="https://github.com/kunalg569/Python_Projects/tree/main/SuperStore_Chi_Square_Test_For_Independence">SuperStore Chi-Square Test</a>: Chi-square test for independence on SuperStore data.
 - <a href="https://github.com/kunalg569/Python_Projects/tree/main/TikTok_Acc_Verification_Hypothesis_Testing">TikTok Account Verification Hypothesis Testing</a>: Hypothesis testing for TikTok account verification data.
 - <a href="https://github.com/kunalg569/Python_Projects/tree/main/TikTok_ClaimsOrOpinions_RandForest_XGBoost">TikTok Claims or Opinions Analysis</a>: Random forest and XGBoost models for analyzing TikTok claims or opinions data.
