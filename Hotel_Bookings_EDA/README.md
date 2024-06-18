@@ -1,2 +1,2 @@
 
-hi 
+<img src = 'snapshot.png'>
