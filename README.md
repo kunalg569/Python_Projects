@@ -2,7 +2,7 @@
 
 <h3>Data Analysis and Visualization</h3>
 
-- <a href="https://github.com/your_username/Python_Projects/tree/main/Bike_Sharing_MLR_ANOVA">Bike Sharing MLR ANOVA</a>: Multiple Linear Regression and ANOVA analysis on bike sharing data.
+- <a href="https://github.com/kunalg569/Python_Projects/tree/main/Bike_Sharing_MLR_ANOVA">Bike Sharing MLR ANOVA</a>: Multiple Linear Regression and ANOVA analysis on bike sharing data.
 - <a href="https://github.com/your_username/Python_Projects/tree/main/Black_Friday_Sales_EDA">Black Friday Sales EDA</a>: Exploratory data analysis on Black Friday sales data.
 - <a href="https://github.com/your_username/Python_Projects/tree/main/ESPN_Cricket_EDA">ESPN Cricket EDA</a>: Exploratory data analysis of cricket data from ESPN.
 - <a href="https://github.com/your_username/Python_Projects/tree/main/Hotel_Bookings_EDA">Hotel Bookings EDA</a>: Exploratory data analysis of hotel bookings data.
