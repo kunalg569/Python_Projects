@@ -25,4 +25,6 @@ To build a model which can predict whether a TikTok video presents a "claim" or 
 ## Data Dictionary
 <img src = 'tiktok_data_dict.png' height = '600' width = '600' align = 'center'>
 
+
+# Exectuive Summary
 <img src = 'snapshot1.png'>
