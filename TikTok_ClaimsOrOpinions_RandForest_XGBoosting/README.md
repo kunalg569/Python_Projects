@@ -1,3 +1,5 @@
+**Disclaimer**: This scenario is hypothetical and designed to simulate a real-world situation. The dataset and its analysis are purely for illustrative purposes to simulate real-world scenarios
+
 <p align = "center">
     <img width="450" height = "250" alt="TikTok.png.webp" src="https://github.com/kunalg569/Python_Projects/blob/main/TikTok_ClaimsOrOpinions_RandForest_XGBoosting/TikTok.png.webp">
 </p>
