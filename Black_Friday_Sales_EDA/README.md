@@ -1,6 +1,8 @@
-*Disclaimer: This scenario is hypothetical and designed to simulate a real-world situation. The dataset and its analysis are purely for illustrative purposes and do not represent actual events or data.*
+**Disclaimer**: This scenario is hypothetical and designed to simulate a real-world situation. The dataset and its analysis are purely for illustrative purposes to simulate real world scenarios
+<p align="center">
+  <img src = 'best-black-friday-deals.jpg' width = '500' height= '350' >
+</p>
 
-<img src = 'best-black-friday-deals.jpg' width = '500' height= '350' >
 
 ## Problem statement:
 A retail company “Wisconn American Dreams Pvt. Ltd.” wants to understand the customer purchase behaviour (specifically, purchase amount) against various products of different categories during Black Friday Sales days. They have shared purchase summary of various customers for selected high volume products from last month. The data set also contains customer demographics (age, gender, marital status, city_type, stay_in_current_city), product details (product_id and product category) and Total purchase_amount from last month. They want to gain insights on the customer purchase pattern and other potential mediums of increase in sales.
