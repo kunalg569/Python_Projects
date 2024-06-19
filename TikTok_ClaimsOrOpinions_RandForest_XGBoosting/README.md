@@ -27,4 +27,6 @@ To build a model which can predict whether a TikTok video presents a "claim" or 
 
 
 # Exectuive Summary
-<img src = 'snapshot1.png'>
+<p align="center">
+  <img src="snapshot1.png"  width='800' height='1080'>
+</p>
