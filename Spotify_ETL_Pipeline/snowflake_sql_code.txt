@@ -1,0 +1,126 @@
+-- Creating Database and schemas
+CREATE OR REPLACE DATABASE SPOTIFY;
+CREATE OR REPLACE SCHEMA EXTERNAL_STAGES;
+CREATE OR REPLACE SCHEMA FILE_FORMATS;
+CREATE OR REPLACE SCHEMA PIPES;
+
+
+-- Creating .csv file format 
+CREATE OR REPLACE FILE FORMAT SPOTIFY.FILE_FORMATS.csv_file_format
+TYPE = 'csv'
+FIELD_DELIMITER = ','
+SKIP_HEADER = 1
+FIELD_OPTIONALLY_ENCLOSED_BY = '"'
+NULL_IF = ('NULL', 'null')
+EMPTY_FIELD_AS_NULL = TRUE;
+
+
+-- Creating tables using .ipynb reference
+CREATE OR REPLACE TABLE SPOTIFY.PUBLIC.songs (
+song_id VARCHAR,
+song_name VARCHAR,
+duration_ms INT,
+url VARCHAR,
+popularity INT,
+song_added DATE,
+album_id VARCHAR,
+artist_id VARCHAR
+
+);
+
+CREATE OR REPLACE TABLE SPOTIFY.PUBLIC.albums (
+
+album_id VARCHAR,
+name VARCHAR,
+release_date DATE,
+total_tracks INT,
+url VARCHAR
+
+);
+
+CREATE OR REPLACE TABLE SPOTIFY.PUBLIC.artists(
+
+artist_id VARCHAR,
+artist_name VARCHAR,
+external_url VARCHAR 
+);
+
+
+-- Create Storage integration for this project
+CREATE OR REPLACE STORAGE INTEGRATION spotify_init
+TYPE = EXTERNAL_STAGE
+STORAGE_PROVIDER = S3
+ENABLED = TRUE
+STORAGE_AWS_ROLE_ARN = 'arn:aws:iam::975050210878:role/spotify_connection' -- From IAM role that you will create
+STORAGE_ALLOWED_LOCATIONS = ('s3://spotify-etl-project-dawny')
+-- CREDENTIALS = (<credential_object>)
+-- [ COPY_OPTIONS = (<copy_options_object>) ]
+-- [ PREFERRED_LOCATIONS = (<location_list>) ]
+COMMENT = 'Creating connection to S3 for spotify project';
+
+DESC INTEGRATION spotify_init;
+
+-- Creating Stages 
+CREATE OR REPLACE STAGE SPOTIFY.EXTERNAL_STAGES.song_stage
+URL = 's3://spotify-etl-project-dawny/transformed_data/songs_data/'
+STORAGE_INTEGRATION = SPOTIFY_INIT
+FILE_FORMAT = (FORMAT_NAME = SPOTIFY.FILE_FORMATS.csv_file_format);
+
+CREATE OR REPLACE STAGE SPOTIFY.EXTERNAL_STAGES.album_stage
+URL = 's3://spotify-etl-project-dawny/transformed_data/album_data/'
+STORAGE_INTEGRATION = SPOTIFY_INIT
+FILE_FORMAT = (FORMAT_NAME = SPOTIFY.FILE_FORMATS.csv_file_format);
+
+CREATE OR REPLACE STAGE SPOTIFY.EXTERNAL_STAGES.artist_stage
+URL = 's3://spotify-etl-project-dawny/transformed_data/artist_data/'
+STORAGE_INTEGRATION = SPOTIFY_INIT
+FILE_FORMAT = (FORMAT_NAME = SPOTIFY.FILE_FORMATS.csv_file_format);
+
+
+-- Copying data into respective tables
+COPY INTO SPOTIFY.PUBLIC.albums
+FROM @SPOTIFY.EXTERNAL_STAGES.album_stage 
+PATTERN = '.*album_transformed.*'
+FILE_FORMAT = (FORMAT_NAME = SPOTIFY.FILE_FORMATS.csv_file_format);
+
+COPY INTO SPOTIFY.PUBLIC.songs
+FROM @SPOTIFY.EXTERNAL_STAGES.song_stage
+PATTERN = '.*songs_transformed.*'
+FILE_FORMAT = (FORMAT_NAME = SPOTIFY.FILE_FORMATS.csv_file_format);
+
+COPY INTO SPOTIFY.PUBLIC.artists
+FROM @SPOTIFY.EXTERNAL_STAGES.artist_stage
+PATTERN = '.*artist_transformed.*'
+FILE_FORMAT = (FORMAT_NAME = SPOTIFY.FILE_FORMATS.csv_file_format);
+
+
+-- Testing loads
+SELECT * FROM SPOTIFY.PUBLIC.albums;
+SELECT * FROM SPOTIFY.PUBLIC.artists;
+SELECT * FROM SPOTIFY.PUBLIC.songs;
+
+-- Dropping song_added colum because its empty
+ALTER TABLE SPOTIFY.PUBLIC.songs 
+DROP COLUMN song_added;
+
+-- Creating snowpipes
+CREATE OR REPLACE pipe SPOTIFY.PIPES.albums_pipe
+AUTO_INGEST = TRUE
+AS
+COPY INTO SPOTIFY.PUBLIC.albums
+FROM @SPOTIFY.EXTERNAL_STAGES.album_stage;
+
+CREATE OR REPLACE pipe SPOTIFY.PIPES.songs_pipe
+AUTO_INGEST = TRUE
+AS
+COPY INTO SPOTIFY.PUBLIC.songs
+FROM @SPOTIFY.EXTERNAL_STAGES.song_stage;
+
+CREATE OR REPLACE pipe SPOTIFY.PIPES.artists_pipe
+AUTO_INGEST = TRUE
+AS
+COPY INTO SPOTIFY.PUBLIC.artists
+FROM @SPOTIFY.EXTERNAL_STAGES.artist_stage;
+
+
+
