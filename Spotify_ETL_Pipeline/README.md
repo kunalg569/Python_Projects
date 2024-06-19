@@ -1,5 +1,5 @@
 # Spotify ETL Pipeline 
-This project demonstrates an ETL (Extract, Transform, Load) pipeline that extracts data from the Spotify API, processes it, and loads it into a Snowflake data warehouse. The pipeline focuses on extracting data related to the top trending albums and creating normalized tables in Snowflake.
+This project demonstrates an ETL (Extract, Transform, Load) pipeline that extracts data from the Spotify API reagarding its trending albums, processes it, and loads it into a Snowflake data warehouse. The pipeline focuses on extracting data related to the top trending albums and creating normalized tables in Snowflake.
 
 ## Architecture
 
