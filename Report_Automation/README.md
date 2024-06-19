@@ -1,5 +1,5 @@
 
-Disclaimer: This scenario is hypothetical and designed to simulate a real-world situation. The dataset and its analysis are purely for illustrative purposes and do not represent actual events or data.
+**Disclaimer**: This scenario is hypothetical and designed to simulate a real-world situation. The dataset and its analysis are purely for illustrative purposes to simulate real-world scenarios
 
 ## Background 
 In today's fast-paced business environment, the need for efficient and accurate reporting is paramount for informed decision-making. At Olist, a leading player in the Brazilian e-commerce landscape, one of the crucial tasks at hand is **automating** the generation of weekly revenue reports. Leveraging the rich insights provided by the Brazilian E-commerce Public dataset by "Olist," we aim to streamline this process and enhance operational efficiency.
