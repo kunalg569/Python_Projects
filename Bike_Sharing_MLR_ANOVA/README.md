@@ -1,3 +1,5 @@
+**Disclaimer**: This scenario is hypothetical and designed to simulate a real-world situation. The dataset and its analysis are purely for illustrative purposes to simulate real-world scenarios
+
 <div style="background-color:#f0f0f0; padding:10px; border-radius:5px;">
     <img src="woom_rgb.jpg" width="400" height="200" style="display:block; margin:auto;" align = "center">
     <h1 style="color:#333333; text-align:center;">Scenario:</h1>
